@@ -1,2 +1,2 @@
 import './index.css'
-console.log('index !!!');
+console.log('index !!! welcome to webpack');

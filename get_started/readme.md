@@ -31,4 +31,10 @@ remain css files in dist
                   filename: '[name].[chunkHash:6]css',
               })
 ```
-    * change 'style-loader' to MiniCssExtractPlugin.loader
+    *   change 'style-loader' to MiniCssExtractPlugin.loader
+
+
+
+local server
+*npm i --save-dev webpack-dev-server *
+*add into package.json  "dev": "webpack-dev-server --mode development --config script/webpack.config.js"*

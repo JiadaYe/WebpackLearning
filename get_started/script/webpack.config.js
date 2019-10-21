@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         main:'./src/index.js',
-        about:'./src/about.js'
+
     },
     output: {
         path: path.resolve(process.cwd(),"dist"), //__dirname
-        filename: "[name].[chunkHash:6].js"  //hash:num  chunkHash/hash
+        filename: "static/js/[name].[chunkHash:6].js"  //hash:num  chunkHash/hash
     },
     plugins: [
 
@@ -19,7 +19,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: '[name].[chunkHash:6]css',
+            filename: 'static/css/[name].[chunkHash:6].css',
         })
 
     ],
@@ -30,5 +30,9 @@ module.exports = {
                 use:[MiniCssExtractPlugin.loader,'css-loader'],
             },
         ],
+    },
+    devServer:{
+        port:3000,
+        open: true
     }
 };
