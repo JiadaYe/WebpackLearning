@@ -36,9 +36,9 @@ remain css files in dist
 
 
 local server
-*npm i --save-dev webpack-dev-server *
-*add into package.json  "dev": "webpack-dev-server --mode development --config script/webpack.config.js"*
-*add into webpack.config.js*
+*   npm i --save-dev webpack-dev-server
+*   add into package.json  "dev": "webpack-dev-server --mode development --config script/webpack.config.js"
+*   add into webpack.config.js
 ```
  devServer:{
         port:3000,
