@@ -5,7 +5,7 @@ module.exports = {
         about:'./src/about.js'
     },
     output: {
-        path: path.resolve(__dirname,"dist"),
+        path: path.resolve(process.cwd(),"dist"), //__dirname
         filename: "[name].[chunkHash:6].js"  //hash:num  chunkHash/hash
     }
 };
