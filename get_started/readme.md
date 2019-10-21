@@ -6,3 +6,28 @@ add script in package.json
 build up a webpack.config.js file
 run build
 *   npm run build
+
+install html webpack plugin
+*   npm i --save-dev html-webpack-plugin
+*   add in webpack.config.js
+    ```plugins: [
+            new HtmlWebpackPlugin()
+        ]
+     ```
+
+css loader
+*   npm i --save-dev css-loader
+*   npm i --save-dev style-loader
+
+remain css files in dist
+*  mini-css-extract-plugin
+**  npm i --save-dev mini-css-extract-plugin
+**    add const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+```
+    new MiniCssExtractPlugin({
+                  // Options similar to the same options in webpackOptions.output
+                  // both options are optional
+                  filename: '[name].[chunkHash:6]css',
+              })
+              ```
+** change 'style-loader' to MiniCssExtractPlugin.loader
