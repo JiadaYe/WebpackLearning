@@ -10,10 +10,11 @@ run build
 install html webpack plugin
 *   npm i --save-dev html-webpack-plugin
 *   add in webpack.config.js
-    ```plugins: [
+```
+    plugins: [
             new HtmlWebpackPlugin()
         ]
-     ```
+```
 
 css loader
 *   npm i --save-dev css-loader
@@ -29,5 +30,5 @@ remain css files in dist
                   // both options are optional
                   filename: '[name].[chunkHash:6]css',
               })
-              ```
+```
 ** change 'style-loader' to MiniCssExtractPlugin.loader
