@@ -31,7 +31,7 @@ remain css files in dist
                   filename: '[name].[chunkHash:6]css',
               })
 ```
-    *   change 'style-loader' to MiniCssExtractPlugin.loader
+*   change 'style-loader' to MiniCssExtractPlugin.loader
 
 
 
