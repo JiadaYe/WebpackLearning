@@ -22,8 +22,8 @@ css loader
 
 remain css files in dist
 *  mini-css-extract-plugin
-**  npm i --save-dev mini-css-extract-plugin
-**    add const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+    *  npm i --save-dev mini-css-extract-plugin
+    *    add const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 ```
     new MiniCssExtractPlugin({
                   // Options similar to the same options in webpackOptions.output
@@ -31,4 +31,4 @@ remain css files in dist
                   filename: '[name].[chunkHash:6]css',
               })
 ```
-** change 'style-loader' to MiniCssExtractPlugin.loader
+    * change 'style-loader' to MiniCssExtractPlugin.loader
