@@ -2,14 +2,14 @@
 Install the webpack and commandline
 *   npm i webpack webpack-cli -D
 add script in package.json
-*   "build": "webpack --mode production --config script/webpack.config.js"
-build up a webpack.config.js file
+*   "build": "webpack --mode production --config script/webpack.config.prod.js"
+build up a webpack.config.prod.js file
 run build
 *   npm run build
 
 install html webpack plugin
 *   npm i --save-dev html-webpack-plugin
-*   add in webpack.config.js
+*   add in webpack.config.prod.js
 ```
     plugins: [
             new HtmlWebpackPlugin()
@@ -37,8 +37,8 @@ remain css files in dist
 
 local server
 *   npm i --save-dev webpack-dev-server
-*   add into package.json  "dev": "webpack-dev-server --mode development --config script/webpack.config.js"
-*   add into webpack.config.js
+*   add into package.json  "dev": "webpack-dev-server --mode development --config script/webpack.config.prod.js"
+*   add into webpack.config.prod.js
 ```
  devServer:{
         port:3000,
@@ -47,7 +47,7 @@ local server
 ```
 less loader
 *   npm i less-loader less --save-dev
-*   add rules in webpack.config.js
+*   add rules in webpack.config.prod.js
 
 
 
@@ -71,7 +71,7 @@ add into package.json
 
 resource loader
 *   npm i file-loader -D
-*   edit in webpack.config.js
+*   edit in webpack.config.prod.js
 ```
  {
                 test: /\.(png|jpe?g|gif)$/i,
@@ -92,9 +92,21 @@ resource loader
 
 url loader like file loader, compress the file additionally
 *   npm i url-loader --save-dev
-*   edit in webpack.config.js
+*   edit in webpack.config.prod.js
 
 copy directory  used to image in html file (02.jpg)
 * npm i copy-webpack-plugin --save-dev
 *
 
+install babel
+*   npm install -D babel-loader @babel/core @babel/preset-env
+*   add into webpack.config.prod.js rules
+
+
+
+
+if want to user different webpack config, just change the script
+
+
+create react app
+npx create-react-app my-app(this is the directory name)

@@ -4,14 +4,17 @@
   "description": "webpack lesson 1",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production --config script/webpack.config.js",
+    "build": "webpack --mode production --config script/webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode development --config script/webpack.config.js"
+    "dev": "webpack-dev-server --mode development --config script/webpack.config.dev.js"
   },
   "author": "Jiada Ye (jiaday@uci.edu)",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "autoprefixer": "^9.6.5",
+    "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",

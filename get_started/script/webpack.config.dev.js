@@ -17,17 +17,16 @@ module.exports = {
             {
                 test: /\.css$/,
                 use:[
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
-                    'postcss-loader',
+
                 ],
             },
             {
                 test: /\.less$/,
                 use:[
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
-                    'postcss-loader',
                     {
                         loader:'less-loader',
                         options:{
@@ -58,6 +57,16 @@ module.exports = {
                 ]
 
             },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
 
         ],
     },
